@@ -1,4 +1,15 @@
 {% extends 'base.html' %}
 {% block content %}
-    <p>{{products}} </p>
+    {% for product in products %}
+    <div class="card border-warning mb-3" style="max-width: 18rem;">
+        <div class="card-header bg-transparent border-success">Header</div>
+        <div class="card-body text-succes">
+            <h5 class="card-title">{{product.product_name}}</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the</p>
+        </div>
+        <div class="card_footer bg-transparent border-success">Footer</div>
+    </div>
+    
+
+    {% endfor %}
 {% endblock %}
