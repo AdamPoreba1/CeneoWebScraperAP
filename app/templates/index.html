@@ -1,4 +1,86 @@
 {% extends 'base.html' %}
 {% block content %}
-    <p>This is index file. </p>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .body4 {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            line-height: 1.6;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 2rem 0;
+        }
+        header {
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        section {
+            margin: 2rem 0;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #333;
+            padding-bottom: 0.5rem;
+        }
+        p, ul {
+            margin: 1rem 0;
+        }
+        ul {
+            list-style-type: square;
+            padding-left: 1.5rem;
+        }
+        .footer2 {
+            text-align: center;
+            padding: 1rem 0;
+            color: #fff;
+        }
+    </style>
+</head>
+<body4>
+    <header>
+
+    </header>
+    <div class="container">
+        <section>
+            <h2>Description</h2>
+            <p>The Ceneo WebScraper is a Python-based project that extracts, processes, and visualizes data from ceneo website. It integrates several powerful libraries to create a seamless data pipeline from web scraping to data presentation.</p>
+        </section>
+        <section>
+            <h2>Key Features</h2>
+            <ul>
+                <li><strong>Data Extraction:</strong> Utilizes the <code>requests</code> library to retrieve HTML content from target websites.</li>
+                <li><strong>Data Parsing:</strong> Uses <code>BeautifulSoup</code> for navigating and extracting specific data points from HTML and XML documents.</li>
+                <li><strong>Data Processing:</strong> Employs <code>pandas</code> to clean and transform the scraped data for analysis.</li>
+                <li><strong>Data Visualization:</strong> Integrates <code>matplotlib</code> and <code>seaborn</code> to generate insightful visualizations.</li>
+                <li><strong>Web Interface:</strong> Implements a web-based dashboard using <code>Flask</code>, providing a user-friendly interface to interact with the data and visualizations.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Libraries Used</h2>
+            <ul>
+                <li><code>requests</code>: For fetching web page content.</li>
+                <li><code>BeautifulSoup</code>: For parsing HTML and XML documents.</li>
+                <li><code>pandas</code>: For data manipulation and analysis.</li>
+                <li><code>matplotlib</code> For creating visualizations.</li>
+                <li><code>Flask</code>: For developing the web interface and dashboard.</li>
+            </ul>
+        </section>
+    </div>
+    <footer2>
+</body4>
+</html>
+
 {% endblock %}

@@ -21,7 +21,7 @@ def extract():
         response = requests.get(url)
         if response.status_code == requests.codes['ok']:
             page_dom = BeautifulSoup(response.text, "html.parser")
-            product_name = extract_content(page_dom, "h1"),
+            product_name = extract_content(page_dom, "h1")
             opinions_count = extract_content(page_dom, 'a.product-review__link > span')
             if opinions_count:
                 url = f"https://www.ceneo.pl/{product_id}#tab=reviews"
@@ -60,12 +60,12 @@ def extract():
                     "cons_count": int(opinions.cons.astype(bool).sum()),
                     "average_scorer": opinions.score.mean().round(3),
                     "score_distribution": opinions.score.value_counts().reindex(np.arange(0,5.5,0.5)).to_dict(),
-                    "recommendation_distribution": opinions.recommendation.value_counts(dropna=False).reindex([1,np.nan,0]),
+                    "recommendation_distribution": opinions.recommendation.value_counts(dropna=False).reindex([1,np.nan,0]).to_dict(),
                 }
                 if not os.path.exists("app/data/statistics"):
                     os.mkdir("app/data/statistics")
                 with open(f"app/data/statistics/{product_id}.json", "w", encoding="UTF-8") as jf:
-                    json.dump(all_opinions, jf, indent=4, ensure_ascii=False)
+                    json.dump(statistics, jf, indent=4, ensure_ascii=False)
                 return redirect(url_for('product', product_id=product_id))
             return render_template("extract.html", error = "Product has no opinion")
         return render_template("extract.html", error = "Product does not exist")

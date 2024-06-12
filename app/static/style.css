@@ -1,3 +1,107 @@
-h1{
-    color: darkorange;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 52px;
+    color: #00f; /* Neon blue color */
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff, 0 0 20px #00f, 0 0 30px #00f, 0 0 40px #00f, 0 0 55px #00f;
+    -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, rgba(0, 0, 255, 0.2));
+}
+
+nav {
+    margin-top: 24px; /* Adjust this value to move the buttons further down */
+}
+
+nav ul {
+    padding: 0;
+    list-style-type: none; /* Remove bullets */
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 10px;
+}
+
+nav li a {
+    display: block;
+    text-decoration: none;
+    color: blue;
+    border: 1px solid black;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav li a:hover {
+    background-color: #d0d0d0;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: #f8f9fa;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+
+}
+footer p {
+    margin: 0;
+    padding: 0 20px;
+}
+
+h5 {
+    text-align: center;
+    font-size: 50px;
+}   
+
+.vr {
+    border-left: 3px solid rgb(5, 4, 90);
+    height: auto; /* Will adjust based on the height of the image */
+    margin-left: 10px; /* Adds some space between the image and the separator */
+}
+
+.d-flex {
+    display: flex;
+    align-items: flex-start; /* Align items vertically in the center */
+}
+
+.photo1 {
+    height: 700px; /* Adjust the height based on your needs */
+    width: auto;
+    margin-right: 50px; /* Adds some space between the image and the separator */
+}
+
+.p2 {
+    text-align: right;
+}
+
+.footer-icons {
+    display: flex;
+    align-items: center;
+}
+
+.footer-icon {
+    margin-left: 10px;
+    width: 24px;
+    height: 24px;
+}
+
+.text-content {
+    margin-left: 50px;
+    font-size: 30px;
 }
