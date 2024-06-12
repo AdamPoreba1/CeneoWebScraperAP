@@ -7,6 +7,7 @@
         <a type="button" class="btn btn-warning" href="{{url_for('download_xlsx', product_id=product_id)}}">XLSX</a>
     </div>
     {{opinions | safe}}
+    <a type="button" class="btn btn-warning" href="{{url_for('charts', product_id=product_id)}}">Charts</a>
 {% endblock %}
 {% block scripts %}
     <script> let table = new DataTable('#opinions', {});</script>
